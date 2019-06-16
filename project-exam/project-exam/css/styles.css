@@ -1,0 +1,742 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind", sans-serif;
+  background-color: #000;
+}
+
+/*=============================================*/
+/*====== PHONE VERSION (SMALLER SCREENS) ======*/
+/*=============================================*/
+
+/*====== header navigation ======*/
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 40px 0 rgba(0,0,0,.1);
+  position: fixed;
+  top: -0px;
+  width: 100%;
+  z-index: 3;  
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #111;
+  border-top: 1px solid;
+
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/*====== header logo/icon ======*/
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 20px 20px;
+  width: 90px;
+  height: 30px;
+  text-decoration: none;
+}
+
+.header {
+  background-color: #000;
+}
+/*====== header menu ======*/
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/*====== hamburger icon (for smaller screens) ======*/
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 20px 30px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navigation-icon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 20px;
+}
+
+.header .menu-icon .navigation-icon:before,
+.header .menu-icon .navigation-icon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navigation-icon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navigation-icon:after {
+  top: -5px;
+}
+
+/*====== menu button ======*/
+
+.header .menu-button {
+  display: none;
+}
+
+.header .menu-button:checked ~ .menu {
+  max-height: 440px;
+}
+
+.header .menu-button:checked ~ .menu-icon .navigation-icon {
+  background: transparent;
+}
+
+.header .menu-button:checked ~ .menu-icon .navigation-icon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-button:checked ~ .menu-icon .navigation-icon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-button:checked ~ .menu-icon:not(.steps) .navigation-icon:before,
+.header .menu-button:checked ~ .menu-icon:not(.steps) .navigation-icon:after {
+  top: 0;
+}
+
+/*====== header banner ======*/
+
+.index-banner {
+    width: 100%;
+    height: 200px;
+    background-image: url('images/background-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.about-banner {
+    width: 100%;
+    height: 200px;
+    background-image: url('images/background-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.launches-banner {
+    width: 100%;
+    height: 200px;
+    background-image: url('images/background-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.apod-banner {
+    width: 100%;
+    height: 200px;
+    background-image: url('images/background-4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+/*=========================*/
+/*====== home style =======*/
+/*=========================*/
+
+.home-wrapper {
+    width: 280px;;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+h1.home-h1 {
+    font-size: 30px; 
+    color: #fff;
+    width: 260px;
+    border-bottom: solid 2px;
+}
+
+p.home-p {
+    font-size: 20px; 
+    color: #fff;
+}
+
+/*==========================*/
+/*====== about style ======*/
+/*==========================*/
+
+.about-wrapper {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+}
+
+h1.about-h1 {
+    padding-top: 60px;
+    font-size: 30px; 
+    color: #fff;
+}
+    
+.about-p {
+    font-size: 15px; 
+    color: #fff;
+}
+    
+    
+img.about-img {
+    width: 100%;
+    height: 200px;
+}
+
+/*============================*/
+/*====== contact style ======*/
+/*============================*/
+    
+.contact-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+    
+h1.contact-h1 {
+    border: 2px solid #333;
+    width: 250px;
+    height: 25px;
+    margin: auto;
+    margin-bottom: 36px;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 400px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.form-input:hover {
+    background: rgb(228, 226, 226);
+}
+
+.form-input:focus, 
+.form-button {
+    outline: none;
+    cursor: pointer;
+}
+
+.form-input {
+    background: white;
+    width: 100%;
+    padding: 3px;
+}
+
+textarea {
+    resize: none;
+    padding: 3px;
+}
+
+label {
+    align-self: flex-start;
+    margin-top: 16px;
+    margin-bottom: 5px;
+}
+
+.submit-button {
+    margin-top: 20px;
+    padding: 5px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1pt;
+    width: 100%;
+    height: 40px;
+}
+
+.submit-button:active,
+.submit-button:hover {
+    cursor: pointer;
+}
+
+.submit-button:focus {
+    outline: none;
+}
+
+#submit-text {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+/*============================*/
+/*====== launches style ======*/
+/*============================*/
+
+.launches-wrapper {
+    padding-top: 110px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+}
+
+.launches-h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    height: 70px;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: solid 2px #fff;
+}
+
+.launches-h3 {
+    color: #fff;
+    text-align: left;
+    font-family: 'Raleway', Arial;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.launches-p {
+    color: #fff;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: solid 2px #fff;
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
+/*============================*/
+/*====== apod style ======*/
+/*============================*/
+
+.apod-wrapper {
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+}
+
+.apod-img {
+    width: 200px;
+    height: 150px;
+}
+
+.apod-h1 {
+    color: #fff;
+    font-size: 20px;
+    border-bottom: solid 2px #fff;
+    padding-top: 160px;
+}
+
+#apod {
+    font-family: 'Roboto', sans-serif;
+}
+
+#apod h2 {
+    color: #fff;
+    font-size: 17px;
+}
+
+#apod p {
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Hind', sans-serif;
+} 
+
+
+
+
+
+/*==============================================*/
+/*====== DESKTOP VERSION (LARGER SCREENS) ======*/
+/*==============================================*/
+@media (min-width: 1000px) {
+
+/*====== header navigation ======*/
+    
+.header ul {
+    background-color: transparent;
+    width: 90%;
+    height: 75px;
+    text-align: center;
+}
+    
+.header li {
+    padding: 16px;
+    display: inline-block;
+    
+  }
+    
+.header li a {
+    padding: 10px 70px;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    width: 100px;
+    text-align: center;
+  }
+    
+    .header a:hover {
+        letter-spacing: 5px;
+        transition: 0.5s;
+    }
+    
+.header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+    
+    ul.menu .active {
+    color: #fff;
+    border: 2px solid #fff;
+    }
+    
+.header .menu-icon {
+    display: none;
+  }
+
+/*====== header logo/icon ======*/
+.header .logo {
+    height: 30px;
+    width: 100px;
+    position: relative;
+}
+    
+
+/*====== header banner ======*/
+    
+.index-banner {
+    margin-top: 90px;
+    width: 100%;
+    height: 400px;
+    background-image: url('images/background-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+    
+.about-banner {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-banner {
+    margin-top: 110px;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background-3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+    
+.launches-banner {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background-4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+    
+.apod-banner {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+    
+/*=========================*/
+/*====== home style =======*/
+/*=========================*/
+    
+.home-wrapper {
+    width: 600px;
+    margin: 0 auto;
+    backface-visibility: hidden;
+    padding-top: 150px;
+    }  
+    
+h1.home-h1 {
+    font-size: 70px; 
+    width: 600px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: solid 5px #fff;
+    line-height: 65px;
+}
+    
+p.home-p {
+    font-size: 25px;
+    font-family: 'Hind', sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+    
+/*=========================*/
+/*====== about style ======*/
+/*=========================*/
+    
+.about-wrapper {
+    width: 50%;
+    height: 100%;
+    padding-top: 80px;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-bottom: 30px;
+    background-image: url(images/opacity.png);
+    margin: auto;
+}
+  
+    
+h1.about-h1 {
+    font-size: 30px;    
+}
+    
+.about-p {
+    font-size: 15px;    
+}
+    
+.column {
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding: 5px;
+    padding-top: 10px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.about-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+    
+img.about-img {
+    width: 330px;
+    height: 200px;
+}
+    
+/*=========================*/
+/*====== contact style ====*/
+/*=========================*/
+    
+.contact-wrapper {
+    background-image: url(images/opacity.png);
+    width: 500px;
+    padding-left: 300px;
+    padding-right: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+h1.contact-h1 {
+    border: 2px solid #333;
+    width: 250px;
+    height: 25px;
+    margin: auto;
+    margin-bottom: 36px;
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 375px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.form-input:hover {
+    background: rgb(228, 226, 226);
+}
+
+.form-input:focus, 
+.form-button {
+    outline: none;
+    cursor: pointer;
+}
+
+.form-input {
+    background: white;
+    width: 100%;
+    padding: 3px;
+}
+
+textarea {
+    resize: none;
+    padding: 3px;
+}
+
+label {
+    align-self: flex-start;
+    margin-top: 16px;
+    margin-bottom: 5px;
+}
+
+.submit-button {
+    margin-top: 20px;
+    padding: 5px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1pt;
+    width: 100%;
+    height: 40px;
+}
+
+.submit-button:active,
+.submit-button:hover {
+    cursor: pointer;
+}
+
+.submit-button:focus {
+    outline: none;
+}
+
+#submit-text {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 16px;
+}
+/*=========================*/
+/*====== launches style ====*/
+/*=========================*/
+    
+.launches-wrapper {
+    width: 50%;
+    height: 100%;
+    padding-top: 30px;
+    padding-left: 300px;
+    padding-right: 300px;
+    background-image: url(images/opacity.png);
+    margin: auto;
+}
+  
+.launches-h1 {
+    font-size: 40px;
+}
+    
+.launches-h3 {
+    line-height: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+.launches-p {
+    padding-top: 10px;
+    font-size: 15px; 
+    font-family: 'Hind', sans-serif;
+}
+ 
+b {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+    
+/*=========================*/
+/*====== apod style ====*/
+/*=========================*/
+
+.apod-wrapper {
+    width: 50%;
+    height: 100%;
+    padding-top: 30px;
+    padding-left: 300px;
+    padding-right: 300px;
+    background-image: url(images/opacity.png);
+    margin: auto;
+    text-align: left;
+}
+
+.apod-img {
+    width: 200px;
+    height: 150px;
+    padding-top: 20px;
+    
+}
+
+.apod-h1 {
+    color: #fff;
+    font-size: 30px;
+    border-bottom: solid 2px #fff;
+    width: 500px;
+    text-align: left;
+}
+
+#apod {
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+#apod h2 {
+    color: #fff;
+    font-size: 17px;
+}
+
+#apod p {
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Hind', sans-serif;
+} 
